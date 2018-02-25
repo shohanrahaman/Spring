@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="address" class="com.shohan.DependencyInjection.Address">
+		<constructor-arg value="Mirpur"></constructor-arg>
+		<constructor-arg value="Bangladesh"></constructor-arg>
+	</bean>
+	<bean id="people" class="com.shohan.DependencyInjection.People">
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg value="Shohan Rahaman"></constructor-arg>
+		<constructor-arg ref="address"></constructor-arg>
+	</bean>
+</beans>
